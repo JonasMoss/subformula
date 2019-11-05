@@ -1,8 +1,8 @@
-#' Estimate model parameters for each formula in a subformulas object.
+#' Apply formulas to a model function
 #'
 #' @export
 #' @param formulas A subformulas object.
-#' @param model The model function. Should take a formula as its first argument.
+#' @param model A model function. Should take a formula as its first argument.
 #' @param data An optional data frame containing the covariates and response
 #' referenced in the formulas supplied. The data argument overrides the environments
 #'
@@ -16,11 +16,11 @@
 #' data(mtcars)
 #' forms = subformulas(mpg ~ cyl + disp + hp + drat,
 #'                     protected = ~ cyl)
-#' mods = model_combinations(formulas = forms,
-#'                           model = lm,
-#'                           data = mtcars)
+#' mods = fapply(formulas = forms,
+#'               model = lm,
+#'               data = mtcars)
 
-model_combinations = function(formulas, model, data, ...) {
+fapply = function(formulas, model, data, ...) {
 
   formulas %>%
     lapply(function(form) {
@@ -30,9 +30,7 @@ model_combinations = function(formulas, model, data, ...) {
     }) ->
     models
 
-  class(models) = c("models")
-  attr(models, "model") = match.call()["model"]
-  attr(models, "formulas") = formulas
+
 
   return(models)
 

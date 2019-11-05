@@ -6,7 +6,7 @@
 ^\.travis\.yml$     # Used for continuous integration testing with travis
 ^README\.Rmd$
 ^README_files$
-^kdensity\.Rproj$
+^subformula\.Rproj$
 ^testing$
 ^\.travis\.yml$
 ^appveyor\.yml$
@@ -18,7 +18,6 @@
 ^CODE-OF-CONDUCT.md$
 ^workspace$
 ^data_raw$
-^univariateML.Rproj$
 ^codecov\.yml$
 figure$
 cache$
