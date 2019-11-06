@@ -1,19 +1,22 @@
 Package: subformula
 Type: Package
-Title: Generate and manipulate subformulas
+Title: Handle Subformulas of a Formula Object
 Version: 0.1.0
 Authors@R: c(
     person("Jonas", "Moss", , "jonas.gjertsen@gmail.com", role = c("aut", "cre"), 
       comment = c(ORCID = "0000-0002-6876-6964")
     ))
-Description: Generate all subformulas of a formula object. 
+Description: Create and handle the subformulas of a formula object. A subformula
+    is 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
-Suggests: testthat,
+Suggests: 
+    testthat,
     rmarkdown,
-    knitr
+    knitr,
+    covr
 VignetteBuilder: knitr
 URL: https://github.com/JonasMoss/subformula,
 BugReports: https://github.com/JonasMoss/subformula/issues
