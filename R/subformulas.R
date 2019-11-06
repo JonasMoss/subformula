@@ -5,10 +5,6 @@
 #' @param protected A vector or formula specifying which, if any,
 #' covariates are protected. They will appear in all computed
 #' subformulas.
-#' @param as_formula Bool specifying whether the function returns
-#' objects of class formula or string.
-#' @param keep_interactions If true, interaction terms will only appear
-#' together with their parents: For x:y to appear, x and y must also appear.
 #' @param data Optional supplied data. Is used to fill out formulas as in
 #' "y ~ .".
 #' @details If the supplied formula includes the term "0" or "-1", none
@@ -23,10 +19,9 @@
 
 subformulas = function(formula,
                        protected = NULL,
-                       as_formula = TRUE,
                        data = NULL) {
 
-  formula = as.formula(formula)
+  formula = stats::as.formula(formula)
   response = get_formula_response(formula)
   terms = get_formula_terms(formula, data)
   protected = get_protected(protected, terms)
@@ -36,16 +31,21 @@ subformulas = function(formula,
                               protected = protected,
                               data = data)
 
-  forms = apply(term_matrix_, 1, function(x) terms[x])
+  if (intercept == 0) {
+    term_matrix_ = cbind(term_matrix_, rep(TRUE, nrow(term_matrix_)))
+    colnames(term_matrix_)[length(terms) + 1] = intercept
+    forms = apply(term_matrix_, 1, function(x) c(terms, 0)[x])
+  } else {
+    forms = apply(term_matrix_, 1, function(x) terms[x])
+  }
+
+
   forms = lapply(forms, function(x)
     do.call(paste, as.list(c(unlist(x), sep = " + "))))
   forms = lapply(forms, function(x) paste0(response, " ~ ", x))
 
   if (is.null(protected))
     forms[[1]] = if (intercept == 1) paste0(response, " ~ 1") else NULL
-
-  if (as_formula)
-    forms = lapply(forms, as.formula, attributes(formula)$.Environment)
 
   class(forms) = c("subformulas", "list")
   attr(forms, "formula") = formula

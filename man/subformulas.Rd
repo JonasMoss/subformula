@@ -4,8 +4,7 @@
 \alias{subformulas}
 \title{Find subformulas of a formula with protected covariates.}
 \usage{
-subformulas(formula, protected = NULL, as_formula = TRUE,
-  keep_interactions = TRUE, intercept_protected = TRUE, data = NULL)
+subformulas(formula, protected = NULL, data = NULL)
 }
 \arguments{
 \item{formula}{A formula or string specifying a formula.}
@@ -13,12 +12,6 @@ subformulas(formula, protected = NULL, as_formula = TRUE,
 \item{protected}{A vector or formula specifying which, if any,
 covariates are protected. They will appear in all computed
 subformulas.}
-
-\item{as_formula}{Bool specifying whether the function returns
-objects of class formula or string.}
-
-\item{keep_interactions}{If true, interaction terms will only appear
-together with their parents: For x:y to appear, x and y must also appear.}
 
 \item{data}{Optional supplied data. Is used to fill out formulas as in
 "y ~ .".}

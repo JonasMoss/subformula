@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
-# subformula <img src="man/figures/logo.png" align="right" width="80" height="80" />
+# subformula <img src="man/figures/logo.png" align="right" width="300" height="100" />
 
 <!-- badges: start -->
 [![Build Status](https://travis-ci.com/JonasMoss/subformula.svg?branch=master)](https://travis-ci.org/JonasMoss/subformula)

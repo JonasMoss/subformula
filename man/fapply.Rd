@@ -4,34 +4,22 @@
 \alias{fapply}
 \title{Apply formulas to a model function}
 \usage{
-fapply(formulas, model, data, ...)
+fapply(formulas, model, ...)
 }
 \arguments{
-\item{formulas}{A subformulas object.}
+\item{formulas}{an object of class "\code{subformulas}".}
 
-\item{model}{A model function. Should take a formula as its first argument.}
+\item{model}{a function taking a \code{formula} as its first argument.}
 
-\item{data}{An optional data frame containing the covariates and response
-referenced in the formulas supplied. The data argument overrides the environments}
-
-\item{...}{Ellipses are passed to the model function.}
+\item{...}{additional arguments to be passed to the \code{model}.}
 }
 \value{
-A list of class "formulas".
+A list of evaluated function calls.
 }
 \description{
 Apply formulas to a model function
 }
-\details{
-If the supplied formula includes the term "0" or "-1", none
-of the subformulas will include the intercept. Otherwise, the intercept
-will be interpreted as being protected.
-}
 \examples{
-data(mtcars)
-forms = subformulas(mpg ~ cyl + disp + hp + drat,
-                    protected = ~ cyl)
-mods = fapply(formulas = forms,
-              model = lm,
-              data = mtcars)
+formulas = subformulas(mpg ~ cyl + disp + hp + drat, protected = ~ cyl)
+models = fapply(formulas = formulas, model = lm, data = mtcars)
 }

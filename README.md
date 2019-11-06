@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# subformula <img src="man/figures/logo.png" align="right" width="80" height="80" />
+# subformula <img src="man/figures/logo.png" align="right" width="300" height="100" />
 
 <!-- badges: start -->
 
@@ -39,16 +39,16 @@ library("subformula")
 formula = y ~ x + u
 as.list(subformulas(formula))
 #> [[1]]
-#> y ~ 1
+#> [1] "y ~ 1"
 #> 
 #> [[2]]
-#> y ~ x
+#> [1] "y ~ x"
 #> 
 #> [[3]]
-#> y ~ u
+#> [1] "y ~ u"
 #> 
 #> [[4]]
-#> y ~ x + u
+#> [1] "y ~ x + u"
 ```
 
 ## Documentation
@@ -58,5 +58,5 @@ A vignette coming soon\!
 ## How to Contribute or Get Help
 
 If you encounter a bug, have a feature request or need some help, open a
-[Github issue](https://github.com/JonasMoss/subformula/issues).This
+[Github issue](https://github.com/JonasMoss/subformula/issues). This
 project follows a [Contributor Code of Conduct](/CODE-OF-CONDUCT.md).
