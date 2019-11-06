@@ -1,17 +1,21 @@
 #' Apply Formulas to a Model
 #'
-#' This is a member of the \code{apply} family. It is similar to
-#' \code{lapply}, but handles the \code{call} slightly differently.
-#' This makes the output prettier.
+#' `fapply` returns a list of the same length as `formulas`. Each element is
+#'    the result of applying `model`the the corresponding element of `formulas`.
+#'
+#' This is a member of the [`apply`][base::lapply] family. It is similar to
+#'    [`lapply`][base::lapply], but handles the [`call`][base::call] slightly
+#'     differently. This makes the output prettier.
 #'
 #' @export
 #' @param formulas a list of formulas or objects coercible to formula by
-#'    \code{\link[stats]{stats::as.formula}}.
-#' @param model a function taking a \code{formula} as its first argument.
+#'    [stats::as.formula].
+#' @param model a function taking a [`formula`][stats::formula] as its first
+#'    argument.
 #' @param ... additional arguments to be passed to \code{model}.
 #' @return \code{fapply} returns a list of evaluated function calls.
 #' @examples
-#' formulas = subformulas(mpg ~ cyl + disp, protected = ~ cyl)
+#' formulas = subformula(mpg ~ cyl + disp, protected = ~ cyl)
 #' fapply(formulas, lm, data = mtcars) # Pretty output.
 #' lapply(formulas, lm, data = mtcars) # Less pretty output.
 

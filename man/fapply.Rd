@@ -8,9 +8,10 @@ fapply(formulas, model, ...)
 }
 \arguments{
 \item{formulas}{a list of formulas or objects coercible to formula by
-\code{\link[stats]{stats::as.formula}}.}
+\link[stats:as.formula]{stats::as.formula}.}
 
-\item{model}{a function taking a \code{formula} as its first argument.}
+\item{model}{a function taking a \code{\link[stats:formula]{formula}} as its first
+argument.}
 
 \item{...}{additional arguments to be passed to \code{model}.}
 }
@@ -18,12 +19,16 @@ fapply(formulas, model, ...)
 \code{fapply} returns a list of evaluated function calls.
 }
 \description{
-This is a member of the \code{apply} family. It is similar to
-\code{lapply}, but handles the \code{call} slightly differently.
-This makes the output prettier.
+\code{fapply} returns a list of the same length as \code{formulas}. Each element is
+the result of applying \code{model}the the corresponding element of \code{formulas}.
+}
+\details{
+This is a member of the \code{\link[base:lapply]{apply}} family. It is similar to
+\code{\link[base:lapply]{lapply}}, but handles the \code{\link[base:call]{call}} slightly
+differently. This makes the output prettier.
 }
 \examples{
-formulas = subformulas(mpg ~ cyl + disp, protected = ~ cyl)
+formulas = subformula(mpg ~ cyl + disp, protected = ~ cyl)
 fapply(formulas, lm, data = mtcars) # Pretty output.
 lapply(formulas, lm, data = mtcars) # Less pretty output.
 }

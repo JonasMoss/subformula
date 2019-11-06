@@ -1,7 +1,7 @@
-#' Calculate subformulas.
+#' Calculate Subformulas
 #'
-#' A formula \code{sub} is a subformula of \code{formula} if (i) all the terms
-#'    on  the right hand side of \code{sub} are terms of \code{form} and (ii)
+#' A formula \code{sub} is a subformula of \code{formula} if *(i)* all the terms
+#'    on the right hand side of \code{sub} are terms of \code{form} and *(ii)*
 #'    their left hand sides are identical. \code{subformula} finds every
 #'    subformula of \code{formula} that contains each term in \code{protected}.
 #'
@@ -9,16 +9,18 @@
 #'    includes the term \code{0} or \code{-1}, none of the subformulas will
 #'    include the intercept. Otherwise, the intercept will be interpreted as
 #'    being protected. If \code{formula} is is coerced to a \code{formula}
-#'    object, its associated environment will be \code{NULL}. All subformulas
-#'    will inherit their \code{.Environment} attribute from \code{formula}.
+#'    object, its associated [environment][base::environment] will be
+#'    \code{NULL}. All subformulas will inherit their \code{.Environment}
+#'    attribute from \code{formula}.
 #'
 #' @export
-#' @param formula an object of class "\code{formula}" (or one that can be
-#'    coerced to that class via \code{\link[stats]{stats::as.formula}}).
+#' @param formula an object of class "[`formula`][stats::formula]" (or one
+#'    that can be coerced to that class via [`formula`][stats::formula]).
 #' @param protected a vector or formula specifying which covariates are
 #'    \emph{protected}. Protected formulas appear in all subformulas.
-#' @param data an optional data frame (or object coercible by as.data.frame
-#'    to a data frame). Used to fill out formulas as \code{y ~ .}.
+#' @param data an optional data frame (or object coercible by
+#'   [`as.data.frame`][base::as.data.frame] to a data frame). Used to fill
+#'   out formulas as \code{y ~ .}.
 #'
 #' @return \code{subformula} returns a list of \code{formula} objects.
 #' @examples
