@@ -1,19 +1,17 @@
 Package: subformula
 Type: Package
 Title: Generate and manipulate subformulas
-Version: 0.0.1
-Author: Jonas Moss
-Maintainer: Jonas Moss <jonas.gjertsen@gmail.com>
-Description: When doing a regression, we often need to consider many submodels
-    of a given model. It can be a hassle to do this over and over,
-    and this package aims to make that easier.
+Version: 0.1.0
+Authors@R: c(
+    person("Jonas", "Moss", , "jonas.gjertsen@gmail.com", role = c("aut", "cre"), 
+      comment = c(ORCID = "0000-0002-6876-6964")
+    ))
+Description: Generate all subformulas of a formula object. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports:
-    dplyr,
-    magrittr,
-    formula.tools,
-    R.methodsS3
 RoxygenNote: 6.1.1
 Suggests: testthat
+VignetteBuilder: knitr
+URL: https://github.com/JonasMoss/subformula,
+BugReports: https://github.com/JonasMoss/subformula/issues
