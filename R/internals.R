@@ -63,3 +63,8 @@ formula_to_call = function(formula, model, data, ...) {
 }
 
 alist2 = function(...) as.list(substitute((...)))[-1]
+
+formula_to_character = function(formula) {
+  form = as.character(formula)
+  paste(form[[2]], form[[1]], form[[3]])
+}

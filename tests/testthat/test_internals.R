@@ -1,4 +1,4 @@
-context("helpers")
+context("internals")
 
 expect_error(get_formula_terms("string"), "formula must be of class 'formula'")
 expect_error(get_formula_response("string"), "formula must be of class 'formula'")
@@ -13,8 +13,8 @@ data = data.frame(z = rnorm(10),
                   t = rnorm(10),
                   u = runif(10))
 
-subs_all = subformulas(formula, protected = protected)
-subs_protected = subformulas(formula)
+subs_all = subformula(formula, protected = protected)
+subs_protected = subformula(formula)
 
 expect_equal(get_formula_response(formula), "z")
 expect_equal(get_formula_terms(formula), c("x", "y", "t", "u"))
