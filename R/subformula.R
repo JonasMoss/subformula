@@ -1,7 +1,7 @@
 #' Calculate Subformulas
 #'
 #' A formula \code{sub} is a subformula of \code{formula} if *(i)* all the terms
-#'    on the right hand side of \code{sub} are terms of \code{form} and *(ii)*
+#'    on the right hand side of \code{sub} are terms of \code{formula} and *(ii)*
 #'    their left hand sides are identical. \code{subformula} finds every
 #'    subformula of \code{formula} that contains each term in \code{protected}.
 #'

@@ -22,7 +22,7 @@ out formulas as \code{y ~ .}.}
 }
 \description{
 A formula \code{sub} is a subformula of \code{formula} if \emph{(i)} all the terms
-on the right hand side of \code{sub} are terms of \code{form} and \emph{(ii)}
+on the right hand side of \code{sub} are terms of \code{formula} and \emph{(ii)}
 their left hand sides are identical. \code{subformula} finds every
 subformula of \code{formula} that contains each term in \code{protected}.
 }

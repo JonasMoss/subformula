@@ -7,8 +7,9 @@ Authors@R: c(
       comment = c(ORCID = "0000-0002-6876-6964")
     ))
 Description: A formula 'sub' is a subformula of 'formula' if all the terms
-    on the right hand side of 'sub' are terms of 'form' and their left hand 
-    sides are identical. This package aids in the creation of subformulas.
+    on the right hand side of 'sub' are terms of 'formula' and their left hand 
+    sides are identical. Creation of subformulas from a parent formula is useful 
+    in for instance model selection.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
