@@ -1,3 +1,6 @@
+## Resubmission
+* Added complete for URL CODE-OF-CONDUCT.md.
+
 ## Test environments
 * local Windows 10, R version R version 3.6.1
 * Windows Server 2012 (on AppVeyor) R version 3.6.1 Patched (2019-10-31 r77367)

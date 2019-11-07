@@ -82,4 +82,5 @@ lapply(models, AIC)
 
 If you encounter a bug, have a feature request or need some help, open a
 [Github issue](https://github.com/JonasMoss/subformula/issues). This
-project follows a [Contributor Code of Conduct](/CODE-OF-CONDUCT.md).
+project follows a [Contributor Code of
+Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html).
