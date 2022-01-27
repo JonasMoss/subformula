@@ -9,14 +9,18 @@
 Status](https://travis-ci.com/JonasMoss/subformula.svg?branch=master)](https://travis-ci.com/JonasMoss/subformula)
 [![AppVeyor Build
 Status](https://ci.appveyor.com/api/projects/status/github/JonasMoss/subformula?branch=master&svg=true)](https://ci.appveyor.com/project/JonasMoss/subformula)
-[![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/subformula)](https://cran.r-project.org/package=subformula)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/subformula)](https://cran.r-project.org/package=subformula)
 [![Coverage
 Status](https://codecov.io/gh/JonasMoss/subformula/branch/master/graph/badge.svg)](https://codecov.io/gh/JonasMoss/subformula?branch=master)
-[![Project Status: Active – The project has reached a stable, usable
-state and is being actively
-developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Project Status: Unsupported – The project has reached a stable,
+usable state but the author(s) have ceased all work on it. A new
+maintainer may be
+desired.](https://www.repostatus.org/badges/latest/unsupported.svg)](https://www.repostatus.org/#unsupported)
 
 <!-- badges: end -->
+
+**This repo is not under active development. If you’re interested
+managing it, raise an issue to transfer ownership.**
 
 `Subformula` constructs the subformulas of a `formula` object. Use this
 to speed up tasks such as model selection and comparison of models.
